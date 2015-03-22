@@ -1,6 +1,6 @@
 /* Author: Shashank G
  * 
- * Implement BFS for a given graph or tree
+ * Implement DFS for a given tree
  * 
  */
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ class DFS {
 		
 		System.out.println("\n*** DFS ***\n");
 		
-		// Do BFS
+		// Do DFS
 		DFS_traversal(root);
 
 		
@@ -55,7 +55,7 @@ class DFS {
 		}// end of while
 		
 		System.out.println("\n*** End of DFS ***\n");
-	}	// end of BFS
+	}	// end of DFS
 	
 	
 	private static ArrayList<binarytree.Node> get_adjacentNodes(binarytree.Node n){
@@ -72,4 +72,4 @@ class DFS {
 		return nlist;	
 	}
 	
-}	// end of class BFS
+}	// end of class DFS
