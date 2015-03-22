@@ -24,16 +24,16 @@ public class binarytree {
 	}	// end of Node class
 	
 	static short lastInserted = 0;					// if 0 --> insert at left
-													// if 1 --> insert at right
+									// if 1 --> insert at right
 	public void insert(Node start, int x){
 		// Rule: Insert left first, then right.
 		// Using lastInserted still give unbalanced tree.
 		// However it is better than before.
 		// Avoid a tree being left heavy. little balanced;
 		
-		binarytree mytree = new binarytree();	// need this instance to reach Node class.
+		binarytree mytree = new binarytree();			// need this instance to reach Node class.
 		Node node = mytree.new Node(x);
-		Node parent = mytree.new Node();		// keeps track of intermediate parent.
+		Node parent = mytree.new Node();			// keeps track of intermediate parent.
 		
 		if (root == null){
 			start = root = node;
@@ -44,7 +44,7 @@ public class binarytree {
 		
 		// if leaf node, go left. --> BUILDS LEFT HEAVY TREE
 		if (start.left != null && start.right != null){
-			parent = start;				// parent pointer
+			parent = start;					// parent pointer
 			
 			if (lastInserted == 0){
 				insert(start.left, x);		
